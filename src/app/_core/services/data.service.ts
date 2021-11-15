@@ -45,6 +45,28 @@ export class DataService {
     );
   }
 
+  getListCourseCard(): Observable<any> {
+    const url =
+      'https://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?MaNhom=GP01';
+    return this.http.get(url).pipe(
+      tap(() => {}),
+      catchError((error: any) => {
+        return this.handleError(error);
+      })
+    );
+  }
+
+  getMenuCourses(): Observable<any> {
+    const url =
+      'https://elearningnew.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhMucKhoaHoc';
+    return this.http.get(url).pipe(
+      tap(() => {}),
+      catchError((error: any) => {
+        return this.handleError(error);
+      })
+    );
+  }
+
   getDetailCourse(id: any): Observable<any> {
     const url = `https://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayThongTinKhoaHoc?maKhoaHoc=${id}`;
     return this.http.get(url).pipe(

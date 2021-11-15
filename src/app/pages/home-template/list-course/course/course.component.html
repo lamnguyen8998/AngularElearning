@@ -1,16 +1,25 @@
-<div class="card">
-  <img class="card-img-top" [src]="course.hinhAnh" alt="" />
-  <div class="card-body">
-    <h4 class="card-title">{{ course.tenKhoaHoc }}</h4>
-    <!-- Truyền 1 param -->
-    <!-- <a class="btn btn-success" routerLink="/detail/{{ course.maKhoaHoc }}"
+<table>
+  <tbody>
+    <div class="card">
+      <img class="card-img-top" [src]="course.hinhAnh" alt="" />
+      <div class="card-body">
+        <h4 class="card-title">{{ course.tenKhoaHoc }}</h4>
+        <!-- Truyền 1 param -->
+        <!-- <a class="btn btn-success" routerLink="/detail/{{ course.maKhoaHoc }}"
       >Detail</a
     > -->
 
-    <!-- Truyền  nhiều  param -->
-    <a class="btn btn-success" routerLink="/detail/{{ course.maKhoaHoc }}"
-      [queryParams]="{ tenKhoaHoc: course.tenKhoaHoc, biDanh: course.biDanh }">Detail</a>
-    <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" (click)="xemNhanh()">Xem
-      Nhanh</button>
-  </div>
-</div>
+        <!-- Truyền  nhiều  param -->
+        <a class="btn btn-success" routerLink="/detail/{{ course.maKhoaHoc }}"
+          [queryParams]="{ tenKhoaHoc: course.tenKhoaHoc, biDanh: course.biDanh }">Detail</a>
+        <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" (click)="xemNhanh()">Xem
+          Nhanh</button>
+      </div>
+    </div>
+  </tbody>
+  <tfoot>
+
+
+  </tfoot>
+
+</table>

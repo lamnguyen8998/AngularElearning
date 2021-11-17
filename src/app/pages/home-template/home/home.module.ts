@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { ShareModuleModule } from 'src/app/_core/shares/share-module/share-module.module';
 import { DemoMaterialModule } from 'src/app/_core/shares/material-module';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [HomeComponent, ChildHomeComponent],
@@ -17,6 +18,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ShareModuleModule,
     DemoMaterialModule,
     NgxPaginationModule,
+    Ng2SearchPipeModule,
   ],
 })
 export class HomeModule {}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DataService } from '@services/data.service';
 import { Subscription } from 'rxjs';
 @Component({
@@ -7,6 +7,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  @Input() course: any;
   term: any;
   p: number = 1;
   courseCard: any = {};

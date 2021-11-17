@@ -47,7 +47,7 @@ export class DataService {
 
   getListCourseCard(): Observable<any> {
     const url =
-      'https://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?MaNhom=GP01';
+      'https://elearningnew.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc_PhanTrang?page=1&pageSize=10&MaNhom=GP01';
     return this.http.get(url).pipe(
       tap(() => {}),
       catchError((error: any) => {

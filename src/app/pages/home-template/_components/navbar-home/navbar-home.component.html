@@ -1,38 +1,59 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <!-- Brand -->
-  <img src="https://cybersoft.edu.vn/wp-content/uploads/2017/03/MIN-OP1.png" alt="logo elearning"
-    style="padding-right: 50px;">
+<header class="p-4 bg-coolGray-100 text-coolGray-800">
+  <div class="container flex justify-between h-16 mx-auto">
+    <ul class="items-stretch hidden space-x-3 lg:flex">
+      <li class="flex">
+        <a routerLink="/"
+          class="flex items-center px-4 -mb-1 border-b-2 border-transparent font-semibold bg-violet-600 text-coolGray-50">Trang
+          Chủ</a>
+      </li>
+      <li class="flex">
+        <a routerLink="/list-course" routerLinkActive="active"
+          class="flex items-center px-4 -mb-1 border-b-2 border-transparent font-semibold bg-violet-600 text-coolGray-50">Danh
+          sách khóa học</a>
+      </li>
+      <li class="nav-item dropdown flex">
+        <a class="nav-link dropdown-toggle flex items-center px-4 -mb-1 border-b-2 border-transparent font-semibold bg-violet-600 text-coolGray-50 "
+          routerLink="/" routerLinkActive="active" id="navbardrop" data-toggle="dropdown">
+          Courses
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="/" *ngFor="let courses of menuCourses">{{courses.maDanhMuc}}
+            {{courses.tenDanhMuc}}</a>
 
-  <!-- Links -->
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/list-course" routerLinkActive="active">List Course</a>
-    </li>
-
-    <!-- Dropdown -->
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" routerLink="/" id="navbardrop" data-toggle="dropdown">
-        Courses
-      </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" routerLink="/" *ngFor="let courses of menuCourses">{{courses.maDanhMuc}}
-          {{courses.tenDanhMuc}}</a>
+        </div>
+      </li>
+    </ul>
+    <a routerLink="/" routerLinkActive="active" aria-label="Back to homepage" class="flex items-center p-2">
+      <img src="https://cybersoft.edu.vn/wp-content/uploads/2017/03/MIN-OP1.png" alt="logo elearning"
+        style="padding-right: 50px;">
+    </a>
+    <div class="flex items-center md:space-x-4">
+      <div class="relative">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+          <button type="submit" title="Search" class="p-1 focus:outline-none focus:ring">
+            <svg fill="currentColor" viewBox="0 0 512 512" class="w-4 h-4 text-coolGray-800">
+              <path
+                d="M479.6,399.716l-81.084-81.084-62.368-25.767A175.014,175.014,0,0,0,368,192c0-97.047-78.953-176-176-176S16,94.953,16,192,94.953,368,192,368a175.034,175.034,0,0,0,101.619-32.377l25.7,62.2L400.4,478.911a56,56,0,1,0,79.2-79.195ZM48,192c0-79.4,64.6-144,144-144s144,64.6,144,144S271.4,336,192,336,48,271.4,48,192ZM456.971,456.284a24.028,24.028,0,0,1-33.942,0l-76.572-76.572-23.894-57.835L380.4,345.771l76.573,76.572A24.028,24.028,0,0,1,456.971,456.284Z">
+              </path>
+            </svg>
+          </button>
+        </span>
+        <input type="search" name="Search" placeholder="Search..."
+          class="w-32 py-2 pl-10 text-sm rounded-md sm:w-auto focus:outline-none bg-coolGray-100 text-coolGray-800 focus:bg-coolGray-50">
 
       </div>
-    </li>
-    <form class="form-inline" action="/action_page.php">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-success" type="submit">Search</button>
-    </form>
-    <li class="nav-item" style="padding-left: 300px;">
-      <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
-    </li>
-    <li class="nav-item" style="padding-left: 50px">
-      <a class="nav-link" routerLink="/auth" routerLinkActive="active">Login</a>
-    </li>
+      <button routerLink="/register" routerLinkActive="active"
+        class="hidden px-6 py-2 font-semibold rounded lg:block bg-violet-600 text-coolGray-50">Register</button>
+      <button type="button" routerLink="/auth" routerLinkActive="active"
+        class="hidden px-6 py-2 font-semibold rounded lg:block bg-violet-600 text-coolGray-50">Log
+        in</button>
+    </div>
 
-  </ul>
-</nav>
+    <button title="Open menu" type="button" class="p-4 lg:hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+        class="w-6 h-6 text-coolGray-800">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+</header>

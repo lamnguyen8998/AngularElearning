@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  courseCard: any;
+  courseCard: any = {};
   subListCourseCard = new Subscription();
 
   constructor(private data: DataService) {
@@ -25,8 +25,8 @@ export class HomeComponent implements OnInit {
 
   getListCourseCard() {
     this.data.getListCourseCard().subscribe((result: any) => {
-      console.log(result);
-      this.courseCard = result;
+      this.courseCard = { ...result };
+      console.log(this.courseCard);
     });
   }
 

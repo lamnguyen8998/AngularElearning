@@ -37,6 +37,7 @@ export class DetailCourseComponent implements OnInit {
       .get(`/api/QuanLyKhoaHoc/LayThongTinKhoaHoc?maKhoaHoc=${this.id}`)
       .subscribe((result: any) => {
         this.course = result;
+        console.log(this.course);
       });
   }
 }

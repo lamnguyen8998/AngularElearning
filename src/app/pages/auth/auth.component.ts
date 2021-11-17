@@ -21,7 +21,7 @@ export class AuthComponent implements OnInit {
           localStorage.setItem('UserAdmin', JSON.stringify(result));
 
           // Chuyển Hướng
-          this.router.navigate(['/admin/dashboard']);
+          this.router.navigate(['/admin']);
         } else {
           alert('TK không hợp lệ');
         }

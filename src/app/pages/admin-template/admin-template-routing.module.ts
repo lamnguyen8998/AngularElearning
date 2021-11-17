@@ -8,11 +8,11 @@ const routes: Routes = [
     path: '',
     component: AdminTemplateComponent,
     children: [
-      {
-        path: '',
-        redirectTo: 'dashboard',
-        pathMatch: 'full',
-      },
+      // {
+      //   path: '',
+      //   redirectTo: 'dashboard',
+      //   pathMatch: 'full',
+      // },
 
       {
         path: 'dashboard',

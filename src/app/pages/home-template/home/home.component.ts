@@ -7,6 +7,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  p: number = 1;
   courseCard: any = {};
   subListCourseCard = new Subscription();
 

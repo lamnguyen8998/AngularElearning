@@ -8,6 +8,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./list-course.component.scss'],
 })
 export class ListCourseComponent implements OnInit {
+  p: number = 1;
   listCourse: any;
   subListCourse = new Subscription();
   constructor(private data: DataService) {}

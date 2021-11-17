@@ -6,6 +6,7 @@ import { ChildHomeComponent } from './child-home/child-home.component';
 import { FormsModule } from '@angular/forms';
 import { ShareModuleModule } from 'src/app/_core/shares/share-module/share-module.module';
 import { DemoMaterialModule } from 'src/app/_core/shares/material-module';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [HomeComponent, ChildHomeComponent],
@@ -15,6 +16,7 @@ import { DemoMaterialModule } from 'src/app/_core/shares/material-module';
     FormsModule,
     ShareModuleModule,
     DemoMaterialModule,
+    NgxPaginationModule,
   ],
 })
 export class HomeModule {}
